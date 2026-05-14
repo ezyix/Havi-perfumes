@@ -17,24 +17,25 @@
   <nav class="navbar">
     <div class="logo">Havi Perfumes</div>
 
-    <button class="menu-toggle">☰</button>
+    <button class="menu-toggle" aria-label="Open menu">☰</button>
 
     <div class="nav-links">
+      <button class="close-menu" aria-label="Close menu">✕</button>
       <a href="#">Home</a>
       <a href="#collection">Collection</a>
     
       <a href="#contact">Contact us</a>
     </div>
-  </nav>
+  </nav> 
 
   <section class="hero">
-      <div class="hero-image reveal">
+      <div class="hero-image ">
       <div class="perfume-card">
-        <img src="maryam body lotion.png" alt="">
+        <img src="maryam body lotion.png" alt="Maryam body lotion" style="border-radius: 20px;">
       </div>
     </div>
 
-    <div class="hero-content reveal">
+    <div class="hero-content ">
 
 
       <h1>
@@ -50,7 +51,7 @@
 
       <div class="hero-buttons">
         <a href="#collection" class="btn btn-gold ">Explore Collection</a>
-        <a href="#" class="btn btn-outline">Watch Story</a>
+       
       </div>
     </div>
 
@@ -237,7 +238,7 @@
   <footer class="footer">
     <p> <h5> &copy; 2026 HAVI Perfumes. All rights reserved.</h5></p>
   </footer>
-  <a class="whatsapp-float" href="https://wa.me/917306966920" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp"><img src="whatsapp icon.png" width="40px" height="40px" style="border-radius: 40px;" ></a>
+  <a class="whatsapp-float" href="https://wa.me/917306966920" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp"><img src="wats icon.png" width="40px" height="40px" style="border-radius: 50px;" ></a>
   <script>
 
     const reveals = document.querySelectorAll(".reveal");
@@ -261,9 +262,14 @@
     // Mobile menu toggle
     const menuToggle = document.querySelector('.menu-toggle');
     const navLinks = document.querySelector('.nav-links');
+    const closeMenu = document.querySelector('.close-menu');
 
     menuToggle.addEventListener('click', () => {
       navLinks.classList.toggle('active');
+    });
+
+    closeMenu.addEventListener('click', () => {
+      navLinks.classList.remove('active');
     });
 
     // Close menu when clicking a link
