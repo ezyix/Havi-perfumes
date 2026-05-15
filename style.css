@@ -617,4 +617,34 @@
       background: #ffff;
     }
 
+    /* Force light theme even if the device prefers dark mode */
+    html {
+      color-scheme: light;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #c9dbf3;
+        --card: #ffffff;
+        --text: #000000;
+        --muted: #9d9d9d;
+        --line: rgba(255,255,255,0.08);
+        --gold: #90ee90;
+        --gold-soft: #b0f0b0;
+        --glass: rgba(255,255,255,0.05);
+      }
+
+      body {
+        background: var(--bg);
+        color: var(--text);
+      }
+
+      .navbar,
+      .nav-links,
+      .contact-card,
+      .footer {
+        background: white;
+      }
+    }
+
   
