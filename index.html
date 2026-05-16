@@ -3,283 +3,410 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Havi Perfumes</title>
-
+  <title>Havi Perfumes — The Art of Timeless Fragrance</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <nav class="navbar">
-    <div class="logo">Havi Perfumes</div>
+  <!-- Particle Canvas Background -->
+  <canvas id="particles"></canvas>
 
-    <button class="menu-toggle" aria-label="Open menu">☰</button>
-
-    <div class="nav-links">
-      <button class="close-menu" aria-label="Close menu">✕</button>
-      <a href="#">Home</a>
-      <a href="#collection">Collection</a>
-    
-      <a href="#contact">Contact us</a>
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <div class="logo">
+        <span class="logo-havi">HAVI</span>
+        <span class="logo-sub">PERFUMES</span>
+      </div>
+      <button class="menu-toggle" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links" id="navLinks">
+        <button class="close-menu" aria-label="Close menu">✕</button>
+        <a href="#" class="nav-link">Home</a>
+        <a href="#collection" class="nav-link">Collection</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </div>
     </div>
-  </nav> 
+  </nav>
 
-  <section class="hero">
-      <div class="hero-image ">
-      <div class="perfume-card">
-        <img src="maryam body lotion.png" alt="Maryam body lotion" style="border-radius: 20px;">
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-bg-orbs">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+    </div>
+
+    <div class="hero-inner">
+      <div class="hero-image-wrap">
+        <div class="hero-glow-ring"></div>
+        <div class="perfume-float">
+          <img src="musk rijali og.jpg" alt="Havi Perfume" />
+        </div>
+      </div>
+
+      <div class="hero-content">
+        <div class="hero-badge">✦ Luxury Fragrances</div>
+        <h1 class="hero-title">
+          The Art Of<br>
+          <em>Timeless</em><br>
+          Fragrance
+        </h1>
+        <p class="hero-sub">
+          Discover premium perfumes crafted with rare ingredients,
+          sophisticated elegance, and unforgettable sensory experiences.
+        </p>
+        <div class="hero-actions">
+          <a href="#collection" class="btn-primary">
+            <span>Explore Collection</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><strong>9+</strong><span>Fragrances</span></div>
+          <div class="stat-divider"></div>
+          <div class="stat"><strong>100%</strong><span>Premium</span></div>
+          <div class="stat-divider"></div>
+          <div class="stat"><strong>Arabian</strong><span>Heritage</span></div>
+        </div>
       </div>
     </div>
 
-    <div class="hero-content ">
-
-
-      <h1>
-        The Art Of <br>
-        Timeless Fragrance
-      </h1>
-
-      <p>
-        Discover premium perfumes crafted with rare ingredients,
-        sophisticated elegance, and unforgettable sensory experiences.
-        HAVI transforms fragrance into luxury.
-      </p>
-
-      <div class="hero-buttons">
-        <a href="#collection" class="btn btn-gold ">Explore Collection</a>
-       
-      </div>
+    <div class="hero-scroll-hint">
+      <div class="scroll-line"></div>
     </div>
-
-  
-
+    <div class="hero-scroll-hint-right">
+      <div class="scroll-line-right"></div>
+    </div>
   </section>
 
-  <section class="section" id="collection">
-    <div class="reveal">
-      <h2 class="section-title">
-         Collection
-      </h2>
-
+  <!-- COLLECTION -->
+  <section class="section collection-section" id="collection">
+    <div class="section-header reveal">
+      <div class="section-label">✦ Our Products</div>
+      <h2 class="section-title">The Collection</h2>
       <p class="section-sub">
-        Each HAVI fragrance is designed to evoke emotion, luxury,
-        and individuality through premium craftsmanship and modern elegance.
+        Each HAVI fragrance is crafted to evoke emotion, luxury,
+        and individuality through premium Arabian craftsmanship.
       </p>
     </div>
 
-    <div class="products ">
+    <div class="products-grid">
 
       <div class="product-card reveal">
-        <div class="product-image">
-          <img src="maryam body lotion.png" alt="Maryam body lotion"style="border-radius: 20px;">
+        <div class="product-img-wrap">
+          <img src="maryam body lotion.png" alt="Maryam body lotion" />
         </div>
-
         <div class="product-info">
-          <h3>Maryam body lotion</h3>
+          <h3>Maryam Body Lotion</h3>
           <p>Premium body lotion with rich floral and oriental notes.</p>
-          <div class="product-actions">
-            <div class="price">₹590</div>
+          <div class="product-footer">
+            <span class="price">₹590</span>
+            <span class="product-tag">Body Care</span>
           </div>
+          <a href="https://wa.me/917306966920?text=Hi%2C%20I%27m%20interested%20in%20Maryam%20Body%20Lotion%20%E2%82%B9590" target="_blank" class="order-btn">Order via WhatsApp</a>
         </div>
       </div>
 
       <div class="product-card reveal">
-        <div class="product-image">
-          <img src="musk rijali og.jpg" alt="Misk Rijali 6ml " style="border-radius: 20px;">
+        <div class="product-img-wrap">
+          <img src="musk rijali og.jpg" alt="Misk Rijali 6ml" />
         </div>
-
         <div class="product-info">
           <h3>Musk Rijali 6ml</h3>
           <p>Long-lasting musk fragrance crafted for all-day wear.</p>
-          <div class="product-actions">
-            <div class="price">₹400</div>
+          <div class="product-footer">
+            <span class="price">₹400</span>
+            <span class="product-tag">Musk</span>
           </div>
+          <a href="https://wa.me/917306966920?text=Hi%2C%20I%27m%20interested%20in%20Musk%20Rijali%206ml%20%E2%82%B9400" target="_blank" class="order-btn">Order via WhatsApp</a>
         </div>
       </div>
 
       <div class="product-card reveal">
-        <div class="product-image">
-          <img src="blue oud.jpg" alt="Blue Oud 12ml" style="border-radius: 20px;">
+        <div class="product-img-wrap">
+          <img src="blue oud.jpg" alt="Blue Oud 12ml" />
         </div>
-
         <div class="product-info">
           <h3>Blue Oud 12ml</h3>
           <p>Strong projection with long-lasting oud aroma.</p>
-          <div class="product-actions">
-            <div class="price">₹700 - ₹800</div>
+          <div class="product-footer">
+            <span class="price">₹700 – ₹800</span>
+            <span class="product-tag">Oud</span>
           </div>
+          <a href="https://wa.me/917306966920?text=Hi%2C%20I%27m%20interested%20in%20Blue%20Oud%2012ml" target="_blank" class="order-btn">Order via WhatsApp</a>
         </div>
       </div>
 
       <div class="product-card reveal">
-        <div class="product-image">
-          <img src="blue oud.jpg" alt="Blue Oud 6ml" style="border-radius: 20px;">
+        <div class="product-img-wrap">
+          <img src="blue oud.jpg" alt="Blue Oud 6ml" />
         </div>
-
         <div class="product-info">
           <h3>Blue Oud 6ml</h3>
           <p>Compact oud bottle with decadent, long-lasting projection.</p>
-          <div class="product-actions">
-            <div class="price">₹380 - ₹400</div>
+          <div class="product-footer">
+            <span class="price">₹380 – ₹400</span>
+            <span class="product-tag">Oud</span>
           </div>
+          <a href="https://wa.me/917306966920?text=Hi%2C%20I%27m%20interested%20in%20Blue%20Oud%206ml" target="_blank" class="order-btn">Order via WhatsApp</a>
         </div>
       </div>
 
       <div class="product-card reveal">
-        <div class="product-image">
-          <img src="lavender oud.jpg" alt="Oud lavender" style="border-radius: 20px;">
+        <div class="product-img-wrap">
+          <img src="lavender oud.jpg" alt="Oud Lavender" />
         </div>
-
         <div class="product-info">
           <h3>Oud Lavender</h3>
           <p>Soft floral oud blend with lavender, musk, and spice.</p>
-          <div class="product-actions">
-            <div class="price">₹550 - ₹600</div>
+          <div class="product-footer">
+            <span class="price">₹550 – ₹600</span>
+            <span class="product-tag">Floral</span>
           </div>
+          <a href="https://wa.me/917306966920?text=Hi%2C%20I%27m%20interested%20in%20Oud%20Lavender" target="_blank" class="order-btn">Order via WhatsApp</a>
         </div>
       </div>
 
       <div class="product-card reveal">
-        <div class="product-image">
-          <img src="lavender oud.jpg" alt="Oud lavender 6ml" style="border-radius: 20px;">
+        <div class="product-img-wrap">
+          <img src="lavender oud.jpg" alt="Oud Lavender 6ml" />
         </div>
-
         <div class="product-info">
           <h3>Oud Lavender 6ml</h3>
           <p>Travel-size fragrance with elegant oud and lavender notes.</p>
-          <div class="product-actions">
-            <div class="price">₹300</div>
+          <div class="product-footer">
+            <span class="price">₹300</span>
+            <span class="product-tag">Floral</span>
           </div>
+          <a href="https://wa.me/917306966920?text=Hi%2C%20I%27m%20interested%20in%20Oud%20Lavender%206ml%20%E2%82%B9300" target="_blank" class="order-btn">Order via WhatsApp</a>
         </div>
       </div>
 
       <div class="product-card reveal">
-        <div class="product-image">
-          <img src="scandel.jpg"   alt="Scandle Scandle (Dubai) 6ml" style="border-radius: 20px;">
+        <div class="product-img-wrap">
+          <img src="scandel.jpg" alt="Scandle Dubai 6ml" />
         </div>
-
         <div class="product-info">
-          <h3>Scandle Scandle (Dubai) 6ml</h3>
+          <h3>Scandle (Dubai) 6ml</h3>
           <p>Very long-lasting crisp fragrance with a modern oriental feel.</p>
-          <div class="product-actions">
-            <div class="price">₹400</div>
+          <div class="product-footer">
+            <span class="price">₹400</span>
+            <span class="product-tag">Oriental</span>
           </div>
+          <a href="https://wa.me/917306966920?text=Hi%2C%20I%27m%20interested%20in%20Scandle%20Dubai%206ml%20%E2%82%B9400" target="_blank" class="order-btn">Order via WhatsApp</a>
         </div>
       </div>
 
       <div class="product-card reveal">
-        <div class="product-image">
-          <img src="havas.jpg" alt="Hawas (Dubai) 6ml" style="border-radius: 20px;">
+        <div class="product-img-wrap">
+          <img src="havas.jpg" alt="Hawas Dubai 6ml" />
         </div>
-
         <div class="product-info">
           <h3>Hawas (Dubai) 6ml</h3>
           <p>Aromatic aquatic fragrance with fresh and exotic accords.</p>
-          <div class="product-actions">
-            <div class="price">₹300</div>
+          <div class="product-footer">
+            <span class="price">₹300</span>
+            <span class="product-tag">Aquatic</span>
           </div>
+          <a href="https://wa.me/917306966920?text=Hi%2C%20I%27m%20interested%20in%20Hawas%20Dubai%206ml%20%E2%82%B9300" target="_blank" class="order-btn">Order via WhatsApp</a>
         </div>
       </div>
 
       <div class="product-card reveal">
-        <div class="product-image">
-          <img src="havas.jpg" alt="Hawas (Dubai) 12ml" style="border-radius: 20px;">
+        <div class="product-img-wrap">
+          <img src="havas.jpg" alt="Hawas Dubai 12ml" />
         </div>
-
         <div class="product-info">
           <h3>Hawas (Dubai) 12ml</h3>
           <p>Long-lasting aquatic scent with a luxurious Arabian finish.</p>
-          <div class="product-actions">
-            <div class="price">₹550 - ₹600</div>
+          <div class="product-footer">
+            <span class="price">₹550 – ₹600</span>
+            <span class="product-tag">Aquatic</span>
           </div>
+          <a href="https://wa.me/917306966920?text=Hi%2C%20I%27m%20interested%20in%20Hawas%20Dubai%2012ml" target="_blank" class="order-btn">Order via WhatsApp</a>
         </div>
       </div>
 
     </div>
-   
-
-     
-    
-
-    
-
   </section>
 
-  <section class="section " id="contact">
-    <div class="reveal">
-      <h2 class="section-title">Contact us</h2>
+  <!-- CONTACT -->
+  <section class="section contact-section" id="contact">
+    <div class="section-header reveal">
+      <div class="section-label">✦ Get In Touch</div>
+      <h2 class="section-title">Contact Us</h2>
       <p class="section-sub">
-        Reach out for orders, store location details, or fragrance guidance. We're happy to assist you.
+        Reach out for orders, store location details, or fragrance guidance. We're happy to assist.
       </p>
     </div>
 
     <div class="contact-grid reveal">
       <div class="contact-card">
-        <h3>Contact Number</h3>
-        <p>+91 73069 66920</p>
-
-        <h3>Place</h3>
-        <p>Kannadiparamba, Kerala 670604, India</p>
-
-        <h3>Location</h3>
-        <a href="https://goo.gl/maps/xFvtWhcBPZN7rXTV6?g_st=aw" target="_blank" rel="noopener">View on Google Maps</a>
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .95h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          </div>
+          <div>
+            <h4>Phone</h4>
+            <p>+91 73069 66920</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <h4>Location</h4>
+            <p>Kannadiparamba, Kerala 670604, India</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+          </div>
+          <div>
+            <h4>Directions</h4>
+            <a href="https://goo.gl/maps/xFvtWhcBPZN7rXTV6?g_st=aw" target="_blank" rel="noopener" class="map-link">View on Google Maps ↗</a>
+          </div>
+        </div>
+        <a href="https://wa.me/917306966920" target="_blank" rel="noopener" class="whatsapp-btn">
+          <img src="wats icon.png" width="22" height="22" alt="WhatsApp" />
+          Chat on WhatsApp
+        </a>
       </div>
 
-      <div class="contact-card">
-        <iframe class="map-embed" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31766.98655839527!2d75.40263487432677!3d11.922858128448614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba4774091cc5bcd%3A0x24a9df9f7d839f45!2sKannadiparamba%2C%20Kerala%20670604!5e0!3m2!1sen!2sin!4v1697393840704!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <div class="map-card">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31766.98655839527!2d75.40263487432677!3d11.922858128448614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba4774091cc5bcd%3A0x24a9df9f7d839f45!2sKannadiparamba%2C%20Kerala%20670604!5e0!3m2!1sen!2sin!4v1697393840704!5m2!1sen!2sin"
+          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
       </div>
     </div>
   </section>
 
+  <!-- FOOTER -->
   <footer class="footer">
-    <p> <h5> &copy; 2026 HAVI Perfumes. All rights reserved.</h5></p>
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <span class="logo-havi">HAVI</span>
+        <span class="logo-sub">PERFUMES</span>
+      </div>
+      <p class="footer-tagline">The Art of Timeless Fragrance</p>
+      <div class="footer-line"></div>
+      <p class="footer-copy">&copy; 2026 HAVI Perfumes. All rights reserved.</p>
+    </div>
   </footer>
-  <a class="whatsapp-float" href="https://wa.me/917306966920" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp"><img src="wats icon.png" width="40px" height="40px" style="border-radius: 50px;" ></a>
+
+  <!-- WhatsApp Float -->
+  <a class="whatsapp-float" href="https://wa.me/917306966920" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+    <img src="wats icon.png" width="26" height="26" alt="WhatsApp" />
+  </a>
+
   <script>
+    // ─── Particle Canvas ───────────────────────────────────────────
+    const canvas = document.getElementById('particles');
+    const ctx = canvas.getContext('2d');
+    let particles = [];
 
-    const reveals = document.querySelectorAll(".reveal");
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
 
-    window.addEventListener("scroll", () => {
+    class Particle {
+      constructor() { this.reset(); }
+      reset() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.size = Math.random() * 1.5 + 0.3;
+        this.speedX = (Math.random() - 0.5) * 0.3;
+        this.speedY = -Math.random() * 0.4 - 0.1;
+        this.opacity = Math.random() * 0.5 + 0.1;
+        this.life = 1;
+      }
+      update() {
+        this.x += this.speedX;
+        this.y += this.speedY;
+        this.life -= 0.003;
+        if (this.life <= 0 || this.y < -10) this.reset();
+      }
+      draw() {
+        ctx.save();
+        ctx.globalAlpha = this.life * this.opacity;
+        ctx.fillStyle = '#c9a84c';
+        ctx.shadowBlur = 4;
+        ctx.shadowColor = '#c9a84c';
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.restore();
+      }
+    }
 
-      reveals.forEach(reveal => {
+    function initParticles() {
+      particles = [];
+      for (let i = 0; i < 80; i++) {
+        const p = new Particle();
+        p.y = Math.random() * canvas.height;
+        particles.push(p);
+      }
+    }
 
-        const windowHeight = window.innerHeight;
-        const revealTop = reveal.getBoundingClientRect().top;
-        const revealPoint = 120;
+    function animateParticles() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      particles.forEach(p => { p.update(); p.draw(); });
+      requestAnimationFrame(animateParticles);
+    }
 
-        if(revealTop < windowHeight - revealPoint){
-          reveal.classList.add("active");
+    resizeCanvas();
+    initParticles();
+    animateParticles();
+    window.addEventListener('resize', () => { resizeCanvas(); initParticles(); });
+
+    // ─── Navbar scroll effect ───────────────────────────────────────
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 60);
+    });
+
+    // ─── Reveal on scroll ──────────────────────────────────────────
+    const reveals = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          // stagger cards in grid
+          const delay = entry.target.closest('.products-grid')
+            ? Array.from(entry.target.parentNode.children).indexOf(entry.target) * 80
+            : 0;
+          setTimeout(() => entry.target.classList.add('active'), delay);
+          revealObserver.unobserve(entry.target);
         }
-
       });
+    }, { threshold: 0.1 });
+    reveals.forEach(el => revealObserver.observe(el));
 
-    });
-
-    // Mobile menu toggle
+    // ─── Mobile menu ───────────────────────────────────────────────
     const menuToggle = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
-    const closeMenu = document.querySelector('.close-menu');
+    const navLinks   = document.getElementById('navLinks');
+    const closeMenu  = document.querySelector('.close-menu');
 
-    menuToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
+    menuToggle.addEventListener('click', () => navLinks.classList.add('active'));
+    closeMenu.addEventListener('click', () => navLinks.classList.remove('active'));
+    navLinks.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => navLinks.classList.remove('active'));
     });
 
-    closeMenu.addEventListener('click', () => {
-      navLinks.classList.remove('active');
-    });
-
-    // Close menu when clicking a link
-    navLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        navLinks.classList.remove('active');
+    // ─── Hero title reveal ─────────────────────────────────────────
+    document.querySelectorAll('.hero-title, .hero-badge, .hero-sub, .hero-actions, .hero-stats')
+      .forEach((el, i) => {
+        el.style.animationDelay = `${i * 0.18 + 0.3}s`;
+        el.classList.add('hero-fade-in');
       });
-    });
-
   </script>
-
 </body>
 </html>
