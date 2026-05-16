@@ -14,6 +14,7 @@
   <!-- Particle Canvas Background -->
   <canvas id="particles"></canvas>
 
+
   <!-- NAVBAR -->
   <nav class="navbar" id="navbar">
     <div class="nav-inner">
@@ -29,6 +30,20 @@
         <a href="#" class="nav-link">Home</a>
         <a href="#collection" class="nav-link">Collection</a>
         <a href="#contact" class="nav-link">Contact</a>
+        
+    <div class="nav-links">
+      <button class="close-menu" aria-label="Close menu">✕</button>
+      <a href="#">Home</a>
+      <a href="#collection">Collection</a>
+      <a href="#contact">Contact us</a>
+      <button class="theme-toggle" aria-label="Switch to dark mode">🌙</button>
+    </div>
+  </nav> 
+
+  <section class="hero">
+      <div class="hero-image ">
+      <div class="perfume-card">
+        <img src="maryam body lotion.png" alt="Maryam body lotion" style="border-radius: 20px;">
       </div>
     </div>
   </nav>
@@ -407,6 +422,38 @@
         el.style.animationDelay = `${i * 0.18 + 0.3}s`;
         el.classList.add('hero-fade-in');
       });
+    });
+
+    // Theme toggle
+    const themeToggle = document.querySelector('.theme-toggle');
+    const savedTheme = localStorage.getItem('theme');
+
+    const applyTheme = (theme) => {
+      if (theme === 'dark') {
+        document.body.classList.add('dark-theme');
+      } else {
+        document.body.classList.remove('dark-theme');
+      }
+
+      if (themeToggle) {
+        themeToggle.textContent = theme === 'dark' ? '☀️' : '🌙';
+        themeToggle.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+      }
+    };
+
+    if (savedTheme === 'dark') {
+      applyTheme('dark');
+    } else {
+      applyTheme('light');
+    }
+
+    if (themeToggle) {
+      themeToggle.addEventListener('click', () => {
+        const theme = document.body.classList.contains('dark-theme') ? 'light' : 'dark';
+        localStorage.setItem('theme', theme);
+        applyTheme(theme);
+      });
+    }
   </script>
 </body>
 </html>
